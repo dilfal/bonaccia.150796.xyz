@@ -264,7 +264,11 @@
 
   function disegnaNuovo(box, inp) {
     box.appendChild(el('h2', null, 'Importa i tuoi dati'));
-    box.appendChild(el('p', null, 'Hai già usato Bonaccia all’indirizzo ' + INDIRIZZO_VECCHIO + '? Lì, nella scheda Diario, scegli «Salva i dati in un file». Poi importalo qui.'));
+    var intro = el('p', null, 'Hai già usato Bonaccia alla versione precedente? ');
+    var vec = el('a', null, 'Aprila qui'); vec.href = 'https://' + INDIRIZZO_VECCHIO + '/#diario';
+    intro.appendChild(vec);
+    intro.appendChild(document.createTextNode(': nella scheda Diario scegli «Salva i dati in un file». Poi importalo qui.'));
+    box.appendChild(intro);
     var az = el('div', 'row');
     var b = el('button', 'btn secondary', 'Importa da un file'); b.type = 'button';
     az.appendChild(b); box.appendChild(az);

@@ -1,5 +1,5 @@
 /* Bonaccia – service worker: tiene l’app e i suoni in memoria per usarla senza rete. */
-var CACHE = 'bonaccia-v16';
+var CACHE = 'bonaccia-v17';
 /* Le recitazioni ora stanno in Sakina (stesso indirizzo, memoria condivisa): la vecchia memoria «bonaccia-recitazioni-v1» non si tocca,
    perché Sakina ne sposta le Sure salvate al primo avvio e poi la svuota. */
 var QURAN_CACHE = 'bonaccia-recitazioni-v1';
